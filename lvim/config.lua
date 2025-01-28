@@ -18,7 +18,9 @@ lvim.plugins = {
   { "mfussenegger/nvim-dap-python" },
   { "nvim-neotest/neotest" },
   { "nvim-neotest/neotest-python" },
-  { 'nvim-neotest/nvim-nio' }
+  { 'nvim-neotest/nvim-nio' },
+  { "AckslD/swenv.nvim" },
+  { "stevearc/dressing.nvim" },
 }
 
 -- Example configuration for vim-illuminate
@@ -69,4 +71,8 @@ local opts = { noremap = true, silent = true }
 -- Map F4 to toggle the DAP UI
 vim.api.nvim_set_keymap("n", "<F4>", "<Cmd>lua require'dapui'.toggle()<CR>", opts)
 
-
+-- binding for switching
+lvim.builtin.which_key.mappings["C"] = {
+  name = "Python",
+  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
+}
