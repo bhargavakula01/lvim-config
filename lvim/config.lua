@@ -21,13 +21,13 @@ lvim.plugins = {
   { 'nvim-neotest/nvim-nio' },
   { "AckslD/swenv.nvim" },
   { "stevearc/dressing.nvim" },
+  {"neovim/nvim-lspconfig"}
 }
 
 -- Example configuration for vim-illuminate
 vim.g.Illuminate_delay = 100
 vim.g.Illuminate_highlightUnderCursor = 0
 
-lvim.keys.term_mode["<Esc>"] = "<C-\\><C-n>"
 
 vim.api.nvim_set_keymap('n', 'b', 'N', { noremap = true, silent = true })
 
@@ -76,3 +76,5 @@ lvim.builtin.which_key.mappings["C"] = {
   name = "Python",
   c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
 }
+
+
