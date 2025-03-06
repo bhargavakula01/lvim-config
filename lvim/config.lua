@@ -21,7 +21,7 @@ lvim.plugins = {
   { 'nvim-neotest/nvim-nio' },
   { "AckslD/swenv.nvim" },
   { "stevearc/dressing.nvim" },
-  {"neovim/nvim-lspconfig"}
+  {"neovim/nvim-lspconfig"},
 }
 
 -- Example configuration for vim-illuminate
@@ -30,6 +30,11 @@ vim.g.Illuminate_highlightUnderCursor = 0
 
 
 vim.api.nvim_set_keymap('n', 'b', 'N', { noremap = true, silent = true })
+-- Bind '1' to move to end of line ($)
+vim.keymap.set("n", "2", "$", { noremap = true, silent = true })
+
+-- Bind '2' to move to first non-whitespace character (^)
+vim.keymap.set("n", "1", "^", { noremap = true, silent = true })
 
 -- setup debug adapter
 lvim.builtin.dap.active = true
