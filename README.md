@@ -1,2 +1,2 @@
 # lvim-config
-My config.lua for Lunarvim
+My configuration for Lunarvim
